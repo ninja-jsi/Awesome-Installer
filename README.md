@@ -29,7 +29,7 @@ git clone https://github.com/ninja-jsi/Awesome-Installer.git
 cd Awesome-Installer
 ```
 
-##**Run the setup script:**
+#**Run the setup script:**
 
 ```
 chmod +x tools-installation.sh
@@ -41,7 +41,7 @@ chmod +x tools-installation.sh
 ```
 export PATH=$PATH:$(go env GOPATH)/bin
 ```
-Add this line to ~/.bashrc to persist across sessions.
+Add this line to ~/.bashrc to persist across sessions if needed.
 
 
 # Notes
