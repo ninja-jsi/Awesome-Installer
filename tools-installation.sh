@@ -42,13 +42,16 @@ if ! grep -q "GOPATH" ~/.bashrc; then
 fi
 
 echo -e "\e[1;34m[+] Installing basic dependencies...\e[0m"
-sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
+sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap 
+sudo apt install -y jq httpie massdns
 
 echo -e "\e[1;34m[+] Installing ProjectDiscovery tools...\e[0m"
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install github.com/ffuf/ffuf/v2@latest
+go install github.com/projectdiscovery/subzy/cmd/subzy@latest
 
 echo -e "\e[1;34m[+] Installing Assetfinder, Amass, Gau, Dalfox, Gf...\e[0m"
 
@@ -58,6 +61,14 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/gf@latest
 go install github.com/hahwul/dalfox/v2@latest
 go install github.com/tomnomnom/httprobe@latest
+go install github.com/hakluke/hakrawler@latest
+go install github.com/devanshbatham/ParamSpider/cmd/ParamSpider@latest
+go install github.com/sensepost/gowitness@latest
+go install github.com/chenjj/Corsy@latest
+go install github.com/haccer/subjack@latest
+go install github.com/michenriksen/aquatone@latest
+
+pip3 install linkfinder
 
 echo -e "\e[1;34m[+] Installing Feroxbuster...\e[0m"
 echo -e "\e[1;34m[+] Installing latest Feroxbuster...\e[0m"
