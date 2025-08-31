@@ -62,10 +62,9 @@ go install github.com/tomnomnom/httprobe@latest
 echo "[+] Installing Feroxbuster..."
 echo "[+] Installing latest Feroxbuster..."
 # Get latest release URL for Linux .deb
-FEROX_URL=$(curl -s https://api.github.com/repos/epi052/feroxbuster/releases/latest \
-  | grep "browser_download_url" \
-  | grep "amd64.deb" \
-  | cut -d '"' -f 4)
+curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
+unzip feroxbuster_amd64.deb.zip
+sudo apt install ./feroxbuster_*_amd64.deb
 
 echo "[+] Downloading: $FEROX_URL"
 curl -sLO $FEROX_URL
