@@ -32,8 +32,8 @@ cd Awesome-Installer
 ##**Run the setup script:**
 
 ```
-chmod +x setup-recon.sh
-./setup-recon.sh
+chmod +x tools-installation.sh
+./tools-installation.sh
 ```
 
 **Add Go binaries to your PATH:**
