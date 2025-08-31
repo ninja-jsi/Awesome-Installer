@@ -27,8 +27,11 @@ echo -e "${GRAY}A curated set of recon, automation & security scripts.${RESET}"
 echo "[+] Updating system..."
 sudo apt update && sudo apt upgrade -y
 
+echo "[+] Installing Golang..."
+sudo apt install -y golang
+
 echo "[+] Installing basic dependencies..."
-sudo apt install -y git curl wget libpcap-dev build-essential golang unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
+sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
 
 echo "[+] Setting up Go PATH..."
 if ! grep -q "GOPATH" ~/.bashrc; then
