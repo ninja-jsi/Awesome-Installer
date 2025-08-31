@@ -28,17 +28,20 @@ echo "[+] Updating system..."
 sudo apt update && sudo apt upgrade -y
 
 echo "[+] Installing Golang..."
-sudo apt install -y golang
-
-echo "[+] Installing basic dependencies..."
-sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
+wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
+rm go1.23.6.linux-amd64.tar.gz
 
 echo "[+] Setting up Go PATH..."
 if ! grep -q "GOPATH" ~/.bashrc; then
     echo "export GOPATH=\$HOME/go" >> ~/.bashrc
     echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.bashrc
+    echo "export PATH=\$PATH:/usr/local" >> ~/.bashrc
     source ~/.bashrc
 fi
+
+echo "[+] Installing basic dependencies..."
+sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
 
 echo "[+] Installing ProjectDiscovery tools..."
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
