@@ -24,16 +24,16 @@ echo -e "${GRAY}A curated set of recon, automation & security scripts.${RESET}"
 # Works on Debian/Ubuntu
 # -----------------------------
 
-echo "[+] Updating system..."
+echo -e "\e34mBold[+] Updating system...\e[0m"
 sudo apt update && sudo apt upgrade -y
 
-echo "[+] Installing Golang..."
+echo -e "\e34mBold[+] Installing Golang...\e[0m"
 wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
 sudo tar -xzf go1.23.6.linux-amd64.tar.gz
 rm go1.23.6.linux-amd64.tar.gz
 mv go /usr/local
 
-echo "[+] Setting up Go PATH..."
+echo -e "\e34mBold[+] Setting up Go PATH...\e[0m"
 if ! grep -q "GOPATH" ~/.bashrc; then
     echo "export GOPATH=\$HOME/go" >> ~/.bashrc
     echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.bashrc
@@ -41,16 +41,16 @@ if ! grep -q "GOPATH" ~/.bashrc; then
     source ~/.bashrc
 fi
 
-echo "[+] Installing basic dependencies..."
+echo -e "\e34mBold[+] Installing basic dependencies...\e[0m"
 sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap
 
-echo "[+] Installing ProjectDiscovery tools..."
+echo -e "\e34mBold[+] Installing ProjectDiscovery tools...\e[0m"
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 
-echo "[+] Installing Assetfinder, Amass, Gau, Dalfox, Gf..."
+echo -e "\e34mBold[+] Installing Assetfinder, Amass, Gau, Dalfox, Gf...\e[0m"
 
 go install github.com/tomnomnom/assetfinder@latest
 go install github.com/owasp-amass/amass/v5/cmd/amass@main
@@ -59,15 +59,12 @@ go install github.com/tomnomnom/gf@latest
 go install github.com/hahwul/dalfox/v2@latest
 go install github.com/tomnomnom/httprobe@latest
 
-echo "[+] Installing Feroxbuster..."
-echo "[+] Installing latest Feroxbuster..."
+echo -e "\e34mBold[+] Installing Feroxbuster...\e[0m"
+echo -e "\e34mBold[+] Installing latest Feroxbuster...\e[0m"
 # Get latest release URL for Linux .deb
 curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
 unzip feroxbuster_amd64.deb.zip
 sudo apt install ./feroxbuster_*_amd64.deb
-
-echo "[+] Downloading: $FEROX_URL"
-curl -sLO $FEROX_URL
 
 # Install the downloaded .deb
 DEB_FILE=$(basename $FEROX_URL)
@@ -76,9 +73,9 @@ sudo apt install -y ./$DEB_FILE
 # Clean up
 rm -f $DEB_FILE
 
-echo "[+] Feroxbuster installed!"
+echo -e "\e34mBold[+] Feroxbuster installed!\e[0m"
 
-echo "[+] Setting up GF patterns..."
+echo -e "\e34mBold[+] Setting up GF patterns...\e[0m"
 if [ ! -d ~/.gf ]; then
     mkdir -p ~/.gf
     git clone https://github.com/1ndianl33t/Gf-Patterns ~/Gf-Patterns
@@ -86,6 +83,6 @@ if [ ! -d ~/.gf ]; then
     rm -rf ~/Gf-Patterns
 fi
 
-echo "[+] Installation complete!"
-echo "Ensure Go binaries are in PATH: $(go env GOPATH)/bin"
-echo "You may need to restart terminal or run: source ~/.bashrc"
+echo -e "\e34mBold[+] Installation complete!\e[0m"
+echo -e "\e34mBold Ensure Go binaries are in PATH: $(go env GOPATH)/bin\e[0m"
+echo -e "\e34mBold You may need to restart terminal or run: source ~/.bashrc\e[0m"
