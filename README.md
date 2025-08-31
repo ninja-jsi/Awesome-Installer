@@ -25,8 +25,8 @@ This repository provides a ready-to-run setup script to install all essential bu
 **Clone the repository:**
 
 ```
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/ninja-jsi/Awesome-Installer.git
+cd Awesome-Installer
 ```
 
 ##**Run the setup script:**
