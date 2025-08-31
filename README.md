@@ -3,22 +3,29 @@ This repository provides a ready-to-run setup script to install all essential bu
 
 # **Tools will Install**
 
-- **subfinder**	- Passive subdomain enumeration </br>
-- **assetfinder**	- Subdomain enumeration via public sources</br>
-- **amass**	- Advanced subdomain enumeration & network mapping</br>
-- **httpx**	- Check live hosts, probe web servers</br>
-- **naabu**	- Fast port scanning</br>
-- **nmap**	- Port scanning and service fingerprinting</br>
-- **nuclei** - Vulnerability scanning using templates</br>
-- **feroxbuster**	- Directory & file brute-forcing</br>
-- **gobuster** - Alternative directory & subdomain brute-force</br>
-- **gau**	- Fetch URLs from archives (Wayback Machine, CommonCrawl)</br>
-- **waybackurls** -	Historical URL discovery</br>
-- **gf + patterns** -	Filter URLs for XSS, SQLi, LFI, SSRF, etc.</br>
-- **gowitness** - Take screenshots of live web hosts</br>
-- **dalfox**	- Automated XSS testing</br>
-- **sqlmap** -	Automated SQL injection testing</br>
-- **commix** -	Command injection testing</br>
+- **Subfinder**	- Passive subdomain enumeration </br>
+- **Assetfinder**	- Subdomain enumeration via public sources</br>
+- **FFUF** – Directory/file fuzzing</br>
+- **Hakrawler** – Quick web crawling</br>
+- **Amass**	- Advanced subdomain enumeration & network mapping</br>
+- **Httpx**	- Check live hosts, probe web servers</br>
+- **Gowitness**	- Screenshot web apps / hosts</br>
+- **Corsy / CorsScanner**	– CORS misconfig scanning</br>
+- **Naabu**	- Fast port scanning</br>
+- **Nmap**	- Port scanning and service fingerprinting</br>
+- **Nuclei** - Vulnerability scanning using templates</br>
+- **Subjack / Subzy / Aquatone** – Subdomain takeover checks</br>
+- **Feroxbuster**	- Directory & file brute-forcing</br>
+- **JQ / HTTPie / MassDNS** – Parsing / DNS brute-forcing</br>
+- **Gobuster** - Alternative directory & subdomain brute-force</br>
+- **Gau**	- Fetch URLs from archives (Wayback Machine, CommonCrawl)</br>
+- **Waybackurls** -	Historical URL discovery</br>
+- **Gf + patterns** -	Filter URLs for XSS, SQLi, LFI, SSRF, etc.</br>
+- **Dalfox**	- Automated XSS testing</br>
+- **SQLmap** -	Automated SQL injection testing</br>
+- **Commix** -	Command injection testing</br>
+- **Anubis / ParamSpider** -	Parameter discovery</br>
+- **LinkFinder** -	JS endpoint discovery</br>
 
 # Installation
 
