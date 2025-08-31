@@ -30,8 +30,8 @@ sudo apt update && sudo apt upgrade -y
 echo "[+] Installing Golang..."
 wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
 sudo tar -xzf https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
-rm go1.23.6.linux-amd64.tar.gz
-mv go /usr/local
+rm ~/go1.23.6.linux-amd64.tar.gz
+mv ~/go /usr/local
 
 echo "[+] Setting up Go PATH..."
 if ! grep -q "GOPATH" ~/.bashrc; then
