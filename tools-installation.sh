@@ -72,6 +72,7 @@ pip3 install linkfinder
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns/
 make
+echo -e "\e[1;34m[+] To Use MassDNS ./bin/massdns...\e[0m"
 
 echo -e "\e[1;34m[+] Installing Feroxbuster...\e[0m"
 echo -e "\e[1;34m[+] Installing latest Feroxbuster...\e[0m"
