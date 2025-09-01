@@ -43,7 +43,7 @@ fi
 
 echo -e "\e[1;34m[+] Installing basic dependencies...\e[0m"
 sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap 
-sudo apt install -y jq httpie
+sudo apt install -y jq httpie chromium
 
 echo -e "\e[1;34m[+] Installing ProjectDiscovery tools...\e[0m"
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
