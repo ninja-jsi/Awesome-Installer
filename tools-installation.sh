@@ -43,7 +43,7 @@ fi
 
 echo -e "\e[1;34m[+] Installing basic dependencies...\e[0m"
 sudo apt install -y curl wget libpcap-dev build-essential unzip python3 python3-pip commix sqlmap gobuster theharvester nmap 
-sudo apt install -y jq httpie massdns
+sudo apt install -y jq httpie
 
 echo -e "\e[1;34m[+] Installing ProjectDiscovery tools...\e[0m"
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
@@ -69,6 +69,9 @@ go install github.com/haccer/subjack@latest
 go install github.com/michenriksen/aquatone@latest
 
 pip3 install linkfinder
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns/
+make
 
 echo -e "\e[1;34m[+] Installing Feroxbuster...\e[0m"
 echo -e "\e[1;34m[+] Installing latest Feroxbuster...\e[0m"
